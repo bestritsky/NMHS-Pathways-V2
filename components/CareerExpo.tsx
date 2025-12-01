@@ -14,7 +14,7 @@ const CareerExpo: React.FC<CareerExpoProps> = ({ onJoinClick }) => {
             <div className="p-10 lg:p-16 flex flex-col justify-center order-2 lg:order-1">
               <div className="inline-flex items-center space-x-2 text-nmgold-600 font-bold tracking-wider uppercase text-sm mb-4">
                 <Calendar size={18} />
-                <span>Save the Date</span>
+                <span>Save the Date - April 9th, 2026 (10:00 AM - 1:00 PM)</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">
                 Annual Career EXPO
