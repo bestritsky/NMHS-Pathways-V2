@@ -42,7 +42,7 @@ const App: React.FC = () => {
       <VideoModal 
         isOpen={isVideoModalOpen} 
         onClose={closeVideoModal} 
-        videoUrl="https://binaryadvisers.com/wp-content/uploads/2024/12/Steve-1.mp4" 
+        videoUrl="https://binaryadvisers.com/wp-content/uploads/2025/12/NMHS-Pathways-Final-2.mp4" 
       />
     </div>
   );

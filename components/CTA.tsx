@@ -18,8 +18,8 @@ const CTA: React.FC<CTAProps> = ({ onJoinClick }) => {
           <div className="relative order-2 lg:order-1 max-w-sm mx-auto">
             <div className="absolute inset-0 bg-nmgold-500 transform translate-x-3 translate-y-3 rounded-2xl"></div>
             <img 
-              src="https://images2.imgbox.com/20/79/Xz4zVVxt_o.jpeg" 
-              alt="Students in a classroom" 
+              src="https://images2.imgbox.com/c6/05/96sgRt0M_o.jpeg" 
+              alt="Make a difference" 
               className="relative w-full rounded-2xl shadow-2xl border border-slate-700 object-cover transform hover:-translate-y-1 transition-transform duration-300"
             />
           </div>

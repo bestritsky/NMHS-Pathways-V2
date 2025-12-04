@@ -50,8 +50,8 @@ const ForStudents: React.FC = () => {
             </div>
             <div className="relative h-64 lg:h-auto">
               <img 
-                src="https://images2.imgbox.com/11/bc/OuWnhOdl_o.jpg" 
-                alt="New Milford High School" 
+                src="https://images2.imgbox.com/e5/84/ZkDF4AUb_o.jpg" 
+                alt="Student Experience" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-nmgreen-900 mix-blend-multiply opacity-0"></div>
