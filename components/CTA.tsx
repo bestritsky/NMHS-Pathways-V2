@@ -27,10 +27,10 @@ const CTA: React.FC<CTAProps> = ({ onJoinClick }) => {
           {/* Text Side */}
           <div className="text-center lg:text-left order-1 lg:order-2">
             <h2 className="text-4xl font-extrabold text-white sm:text-5xl mb-6 leading-tight">
-              Ready to make a difference?
+              Your Town. Your Tour. Your Legacy.
             </h2>
             <p className="text-xl text-slate-300 mb-10">
-              It starts with a single hour. Host a tour, get your sticker, and help shape the future of New Milford.
+              Give us one hour, and we’ll give you a voice in New Milford’s future. Show us your world, earn your exclusive sticker, and prove that one person really can make a difference.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button

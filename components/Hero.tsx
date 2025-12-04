@@ -27,12 +27,13 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick, onWatchVideoClick }) => {
         
         <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight">
           Give Us Just <span className="text-white">One Hour.</span><br />
-          Market Your Company <span className="text-white">For Free.</span><br />
+          Market Your Company <span className="text-nmgold-500">For Free.</span><br />
           Inspire the Next <span className="text-white">New Milford Generation.</span>
         </h1>
         
-        <p className="mt-4 max-w-2xl mx-auto text-xl text-slate-300 mb-10">
-          Connect with motivated students, market your business to the community, and help build your future workforce. It starts with just one hour.
+        <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-slate-300 mb-10 leading-relaxed">
+          <span className="block text-white font-medium mb-2">Don’t let the future of New Milford be decided without you.</span>
+          Your business is the heartbeat of this town. Give us one hour to tour your operations, and we'll give you a direct line to shape what comes next. Plus, earn the exclusive "New Milford Partner" window decal to show customers you’re leading the charge.
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
