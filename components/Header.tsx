@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, PlayCircle } from 'lucide-react';
 
 interface HeaderProps {
   onJoinClick: () => void;
+  onWatchVideoClick: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ onJoinClick }) => {
+const Header: React.FC<HeaderProps> = ({ onJoinClick, onWatchVideoClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -16,12 +17,6 @@ const Header: React.FC<HeaderProps> = ({ onJoinClick }) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navLinks = [
-    { name: 'For Business', href: '#business' },
-    { name: 'The Program', href: '#program' },
-    { name: 'For Students', href: '#students' },
-  ];
 
   return (
     <header 
@@ -43,18 +38,14 @@ const Header: React.FC<HeaderProps> = ({ onJoinClick }) => {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => (
-            <a 
-              key={link.name}
-              href={link.href} 
-              className={`font-medium hover:text-nmgreen-500 transition-colors ${
-                isScrolled ? 'text-slate-600' : 'text-white/90'
-              }`}
-            >
-              {link.name}
-            </a>
-          ))}
+        <nav className="hidden md:flex items-center space-x-6">
+          <button 
+            onClick={onWatchVideoClick}
+            className={`flex items-center font-semibold transition-colors hover:text-nmgold-500 ${isScrolled ? 'text-slate-700' : 'text-white'}`}
+          >
+            <PlayCircle size={18} className="mr-2" />
+            Watch The Video
+          </button>
           <button
             onClick={onJoinClick}
             className="bg-nmgold-500 hover:bg-nmgold-400 text-slate-900 font-bold py-2 px-6 rounded-full transition-transform transform hover:scale-105 shadow-lg"
@@ -77,23 +68,23 @@ const Header: React.FC<HeaderProps> = ({ onJoinClick }) => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white absolute w-full border-b shadow-lg">
-          <div className="px-4 pt-2 pb-6 space-y-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50 rounded-md"
-              >
-                {link.name}
-              </a>
-            ))}
+          <div className="px-4 pt-4 pb-6 space-y-3">
+             <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onWatchVideoClick();
+              }}
+              className="w-full flex items-center justify-center py-3 text-slate-700 font-bold border border-slate-200 rounded-lg hover:bg-slate-50"
+            >
+              <PlayCircle size={18} className="mr-2 text-nmgreen-600" />
+              Watch The Video
+            </button>
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onJoinClick();
               }}
-              className="w-full mt-4 bg-nmgreen-700 text-white font-bold py-3 rounded-lg"
+              className="w-full bg-nmgreen-700 text-white font-bold py-3 rounded-lg"
             >
               Become a Partner
             </button>

@@ -24,7 +24,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header onJoinClick={openModal} />
+      <Header onJoinClick={openModal} onWatchVideoClick={openVideoModal} />
       
       <main className="flex-grow">
         <Hero onJoinClick={openModal} onWatchVideoClick={openVideoModal} />
